@@ -16,8 +16,10 @@ const Layout = (props) => {
 				title(header)
 			]),
 			body([
-				div('.top', [ Header({subheader: subheader}), Menu() ]),
-				div('.content', Array.isArray(props.children) ? props.children : [ props.children ])
+				div('#document', [
+					div('#top', [ Header({subheader: subheader}), Menu() ]),
+					div('.content', Array.isArray(props.children) ? props.children : [ props.children ])
+				])
 			])
 		]);
 };
