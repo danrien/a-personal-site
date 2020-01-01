@@ -7,8 +7,6 @@ const Index = hh((props) =>
 		{ subheader: 'Side Projects' },
 		[ script({ type: 'text/javascript', src: '/js/project.client.js' }) ]
 		.concat(
-			props
-			.projects
-			.map((project) => ProjectDetails({ project: project })))));
+			props.projects.map((project) => ProjectDetails({ project: project })))));
 
 module.exports = Index;
